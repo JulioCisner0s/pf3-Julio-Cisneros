@@ -1,0 +1,10 @@
+<ng-container *ngIf="sesion$ | async as sesion">
+    <mat-toolbar class="title" *ngIf="sesion.sesionActiva">
+        <a>
+            <span>Academia Tikal <img src="../../../../assets/6041529.png"></span>
+        </a>
+        <a class="logout" matTooltip="Cerrar sesion" *ngIf="sesion.sesionActiva" (click)="logout()">
+            <mat-icon>logout</mat-icon>
+        </a>
+    </mat-toolbar>
+</ng-container>
